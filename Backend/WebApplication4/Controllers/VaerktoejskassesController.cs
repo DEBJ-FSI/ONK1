@@ -14,9 +14,9 @@ namespace WebApplication4.Controllers
     [ApiController]
     public class VaerktoejskassesController : ControllerBase
     {
-        private readonly WebApplication4Context _context;
+        private readonly HaandvaerkerContext _context;
 
-        public VaerktoejskassesController(WebApplication4Context context)
+        public VaerktoejskassesController(HaandvaerkerContext context)
         {
             _context = context;
         }

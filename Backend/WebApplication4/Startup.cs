@@ -29,8 +29,10 @@ namespace WebApplication4
         {
             services.AddControllers();
 
-            services.AddDbContext<WebApplication4Context>(options =>
+            services.AddDbContext<HaandvaerkerContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("WebApplication4Context")));
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +42,7 @@ namespace WebApplication4
             {
                 app.UseDeveloperExceptionPage();
             }
+         
 
             app.UseHttpsRedirection();
 
@@ -51,6 +54,10 @@ namespace WebApplication4
             {
                 endpoints.MapControllers();
             });
+
+            using var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope();
+            var context = serviceScope.ServiceProvider.GetRequiredService<HaandvaerkerContext>();
+            context.Database.EnsureCreated();
         }
     }
 }

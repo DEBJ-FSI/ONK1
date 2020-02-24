@@ -15,10 +15,10 @@ namespace WebApplication4.Controllers
     [ApiController]
     public class HaandvaerkersController : ControllerBase
     {
-        private readonly WebApplication4Context _context;
+        private readonly HaandvaerkerContext _context;
 
 
-        public HaandvaerkersController(WebApplication4Context context)
+        public HaandvaerkersController(HaandvaerkerContext context)
         {
             _context = context;
 
