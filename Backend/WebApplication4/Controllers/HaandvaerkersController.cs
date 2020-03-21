@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApplication4.Data;
-using WebApplication4.Models;
+using FITONKgrp7Backend.Data;
+using FITONKgrp7Backend.Models;
 
-namespace WebApplication4.Controllers
+namespace FITONKgrp7Backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,4 +1,5 @@
 {
+  "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
@@ -7,8 +8,14 @@
       "sslPort": 44389
     }
   },
-  "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/",
+      "publishAllPorts": true,
+      "useSSL": true
+    },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
@@ -25,30 +32,6 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "applicationUrl": "https://localhost:5001;http://localhost:5000"
-    },
-    "Docker": {
-      "commandName": "Docker",
-      "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/weatherforecast",
-      "publishAllPorts": true,
-      "useSSL": true
-    },
-    {
-      "Logging": {
-        "LogLevel": {
-          "Default": "Information",
-          "Microsoft": "Warning",
-          "Microsoft.Hosting.Lifetime": "Information"
-        }
-      },
-      "AllowedHosts": "*",
-      "ConnectionStrings": {
-        "F20ITONKASPNETCore31MicroserviceBackendContext": "Server=(localdb)\\mssqllocaldb;Database=F20ITONKASPNETCore31MicroserviceBackendDB;Trusted_Connection=True;MultipleActiveResultSets=true",
-        "F20ITONKASPNETKubernetesConnection": "Server=mssql-server2017-jrt;Database=F20ITONKASPNETCore31MicroserviceBackend;User ID=SA;Password=F20ItOnk123;MultipleActiveResultSets=true",
-        "F20ITONKASPNETDockerConnection": "Server=35.240.38.170;Database=F20ITONKASPNETCore31MicroserviceBackend;User ID=SA;Password=F20ItOnk123;MultipleActiveResultSets=true"
-
-
-      }
     }
   }
 }

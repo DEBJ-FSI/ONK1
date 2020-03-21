@@ -12,9 +12,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using WebApplication4.Data;
+using FITONKgrp7Backend.Data;
 
-namespace WebApplication4
+namespace FITONKgrp7Backend
 {
     public class Startup
     {
@@ -30,8 +30,8 @@ namespace WebApplication4
         {
             services.AddControllers();
 
-            services.AddDbContext<HaandvaerkerContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("WebApplication4Context")));
+            //services.AddDbContext<HaandvaerkerContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("WebApplication4Context")));
 
             //    Cycles in Domaine model
             //    https://stackoverflow.com/questions/58846765/cycle-in-database

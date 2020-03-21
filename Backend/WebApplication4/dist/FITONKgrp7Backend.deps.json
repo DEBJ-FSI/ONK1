@@ -22,7 +22,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "WebApplication4/1.0.0": {
+      "FITONKgrp7Backend/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.1",
@@ -303,10 +303,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "WebApplication4.dll": {}
+          "FITONKgrp7Backend.dll": {}
         },
         "compile": {
-          "WebApplication4.dll": {}
+          "FITONKgrp7Backend.dll": {}
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -3963,7 +3963,7 @@
     }
   },
   "libraries": {
-    "WebApplication4/1.0.0": {
+    "FITONKgrp7Backend/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

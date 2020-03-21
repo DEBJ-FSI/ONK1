@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApplication4.Models
+namespace FITONKgrp7Backend.Models
 {
     public class Vaerktoej
     {

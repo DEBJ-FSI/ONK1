@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: itonk-ap1-gr7
+spec:
+  selector:
+    matchLabels:
+      app: itonk-ap1-gr7-pod
+  template:
+    metadata:
+      labels:
+        app: itonk-ap1-gr7-pod
+    spec:
+      containers:
+      - name: itonk-ap1-gr7-backend
+        image: itonkgrp7backend:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+      - name: itonk-ap1-gr7-frontend:latest
+        image: itonkgrp7frontend
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080

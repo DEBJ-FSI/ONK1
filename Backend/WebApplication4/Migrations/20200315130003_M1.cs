@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace WebApplication4.Migrations
+namespace FITONKgrp7Backend.Migrations
 {
     public partial class M1 : Migration
     {

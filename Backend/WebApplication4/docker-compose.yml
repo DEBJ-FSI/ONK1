@@ -1,0 +1,30 @@
+version: '3'
+
+volumes:
+  datafiles:
+
+services:
+  f20itonkbackendgrp7:
+    image: mysql:latest
+    volumes:
+      - datafiles: /var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+
+  mvc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on: 
+      - f20itonkbackendgrp7
+    ports: 
+      - "8080:80"
+    restart: always
+    environment: 
+      - DBHOST=f20itonkbackendgrp7
+      - ASPNETCORE_ENVIRONMENT=Development
+
+# run this in powershell from root-folder      
+  #docker-compose -f docker-compose.yml up
+# 

@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebApplication4.Data;
+using FITONKgrp7Backend.Data;
 
-namespace WebApplication4.Migrations
+namespace FITONKgrp7Backend.Migrations
 {
     [DbContext(typeof(HaandvaerkerContext))]
     [Migration("20200315130003_M1")]
@@ -21,7 +21,7 @@ namespace WebApplication4.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("WebApplication4.Models.Haandvaerker", b =>
+            modelBuilder.Entity("FITONKgrp7Backend.Models.Haandvaerker", b =>
                 {
                     b.Property<int>("HaandvaerkerId")
                         .ValueGeneratedOnAdd()
@@ -45,7 +45,7 @@ namespace WebApplication4.Migrations
                     b.ToTable("Haandvaerker");
                 });
 
-            modelBuilder.Entity("WebApplication4.Models.Vaerktoej", b =>
+            modelBuilder.Entity("FITONKgrp7Backend.Models.Vaerktoej", b =>
                 {
                     b.Property<int>("VTId")
                         .ValueGeneratedOnAdd()
@@ -77,7 +77,7 @@ namespace WebApplication4.Migrations
                     b.ToTable("Vaerktoej");
                 });
 
-            modelBuilder.Entity("WebApplication4.Models.Vaerktoejskasse", b =>
+            modelBuilder.Entity("FITONKgrp7Backend.Models.Vaerktoejskasse", b =>
                 {
                     b.Property<int>("VTKId")
                         .ValueGeneratedOnAdd()
@@ -110,20 +110,20 @@ namespace WebApplication4.Migrations
                     b.ToTable("Vaerktoejskasse");
                 });
 
-            modelBuilder.Entity("WebApplication4.Models.Vaerktoej", b =>
+            modelBuilder.Entity("FITONKgrp7Backend.Models.Vaerktoej", b =>
                 {
-                    b.HasOne("WebApplication4.Models.Vaerktoejskasse", "Vaerktoejskasse")
+                    b.HasOne("FITONKgrp7Backend.Models.Vaerktoejskasse", "Vaerktoejskasse")
                         .WithMany("Vaarktoejer")
                         .HasForeignKey("Liggerivtk")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("WebApplication4.Models.Vaerktoejskasse", b =>
+            modelBuilder.Entity("FITONKgrp7Backend.Models.Vaerktoejskasse", b =>
                 {
-                    b.HasOne("WebApplication4.Models.Haandvaerker", "Haandvaerker")
+                    b.HasOne("FITONKgrp7Backend.Models.Haandvaerker", "Haandvaerker")
                         .WithOne("Vaerktoejskasse")
-                        .HasForeignKey("WebApplication4.Models.Vaerktoejskasse", "VTKEjesAf")
+                        .HasForeignKey("FITONKgrp7Backend.Models.Vaerktoejskasse", "VTKEjesAf")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

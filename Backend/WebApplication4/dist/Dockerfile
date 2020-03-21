@@ -3,4 +3,4 @@ ADD ./ /app
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
-ENTRYPOINT [ "dotnet", "F20ITONK.ASPNETCore31.Microservice.Backend.dll"]
+ENTRYPOINT [ "dotnet", "WebApplication4.dll"]
